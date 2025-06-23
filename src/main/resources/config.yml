@@ -1,0 +1,7 @@
+messages:
+  sellinv:
+    enable: true
+    text:
+      - ' '
+      - ' Вы продали шмоток на {price} долларов'
+      - ' '

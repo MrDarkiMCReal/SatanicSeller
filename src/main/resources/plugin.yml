@@ -1,0 +1,4 @@
+name: SatanicSeller
+version: '${project.version}'
+main: org.mrdarkimc.satanicseller.SatanicSeller
+api-version: '1.21'
