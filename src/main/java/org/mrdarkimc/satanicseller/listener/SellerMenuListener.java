@@ -51,7 +51,7 @@ public class SellerMenuListener implements Listener {
                 }
             }
             if (price!=0) {
-                SatanicSeller.getCurrency().addMoney(player, price);
+                SatanicSeller.getDollarCurrency().addMoney(player, price);
                 new Message(player, "Вы продали шмота на %s".formatted(price), null).send();
             }
         }

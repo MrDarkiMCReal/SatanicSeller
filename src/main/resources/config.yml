@@ -1,11 +1,3 @@
-messages:
-  sellinv:
-    enable: true
-    text:
-      - ' '
-      - ' %design_clr_primary%Вы %design_clr_main%продали %design_clr_primary%шмоток на &f%img_money%%design_clr_money%{price}'
-      - ' '
-notifiers:
 sellermenu:
   header: ":offset_-48::slot2:"
   rows: 54

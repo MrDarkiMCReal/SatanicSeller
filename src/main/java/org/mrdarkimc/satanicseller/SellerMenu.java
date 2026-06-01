@@ -7,6 +7,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.mrdarkimc.SatanicLib.ConfigAPI.Config;
 import org.mrdarkimc.SatanicLib.configsetups.Configs;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class SellerMenu implements InventoryHolder {
         fillDefaults();
     }
     public void fillDefaults(){
-        Configs conf = SatanicSeller.getInstance().getSatanicConfig();
+        Config conf = SatanicSeller.getInstance().getSatanicConfig();
         conf.get().getStringList("sellermenu.items");
         Set<String> keys = conf.get().getConfigurationSection("sellermenu.items").getKeys(false);
         for (String key : keys) {

@@ -1,0 +1,7 @@
+messages:
+  sellinv:
+    enable: true
+    text:
+      - ' '
+      - ' %design_clr_primary%Вы %design_clr_main%продали %design_clr_primary%шмоток на &f%img_money%%design_clr_money%{price}'
+      - ' '

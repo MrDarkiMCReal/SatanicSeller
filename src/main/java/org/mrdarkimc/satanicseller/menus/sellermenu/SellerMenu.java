@@ -6,14 +6,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.mrdarkimc.SatanicLib.messages.KeyedMessage;
+import org.mrdarkimc.SatanicLib.NotifyAPI.KeyedMessage;
 import org.mrdarkimc.satanicmenus.buttons.MenuButton;
 import org.mrdarkimc.satanicmenus.clickactions.MenuClickAction;
 import org.mrdarkimc.satanicmenus.menus.AbstractMenu;
 import org.mrdarkimc.satanicmenus.utils.BlockedSlots;
 import org.mrdarkimc.satanicseller.SatanicSeller;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Map;
 
 public class SellerMenu extends AbstractMenu implements Cloneable {
     private final MenuService service;
@@ -72,8 +73,8 @@ public class SellerMenu extends AbstractMenu implements Cloneable {
     public void onClose(Player player) {
         int price = service.sellAndGetTotalPriceForItems(player, this);
         if (price != 0) {
-            SatanicSeller.getCurrency().addMoney(player, price);
-            new KeyedMessage(player, "messages.sellinv", Map.of("{price}", formatPrice(price))).send();
+            SatanicSeller.getDollarCurrency().addMoney(player, price);
+            KeyedMessage.of("sellinv").withPlaceholders(Map.of("{price}", formatPrice(price))).send(player);
         }
     }
 
