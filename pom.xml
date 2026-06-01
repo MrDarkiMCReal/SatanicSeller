@@ -51,6 +51,10 @@
 
   <repositories>
       <repository>
+          <id>placeholderapi</id>
+          <url>https://repo.extendedclip.com/releases/</url>
+      </repository>
+      <repository>
           <id>spigotmc-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
       </repository>
@@ -61,6 +65,7 @@
   </repositories>
 
   <dependencies>
+
       <dependency>
           <groupId>org.mrdarkimc</groupId>
           <artifactId>ItemWorth</artifactId>
@@ -74,8 +79,21 @@
           <scope>provided</scope>
       </dependency>
       <dependency>
+          <groupId>me.clip</groupId>
+          <artifactId>placeholderapi</artifactId>
+          <version>2.11.6</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
           <groupId>org.mrdarkimc</groupId>
           <artifactId>SatanicLib</artifactId>
+          <scope>provided</scope>
+          <version>1.0</version>
+
+      </dependency>
+      <dependency>
+          <groupId>org.mrdarkimc</groupId>
+          <artifactId>SatanicMenusAPI</artifactId>
           <version>1.0</version>
           <scope>provided</scope>
       </dependency>
